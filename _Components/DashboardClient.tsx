@@ -61,21 +61,6 @@ export default function DashboardClient() {
         }
     };
 
-    // Déconnexion
-    const router = useRouter();
-    /* 
-        const handlLogout = async () => {
-            try {
-                await fetch('/api/admin/logout', {
-                    method: 'POST',
-                });
-                //Redirection aprés connextion
-                router.push('/login')
-            } catch (error) {
-                console.error("erreur lors de la déconnexion", error);
-            }
-        } */
-
     const supprimerMessage = async (id: number) => {
         if (!confirm('Voulez-vous supprimer ce message ?')) return;
 
@@ -290,7 +275,7 @@ export default function DashboardClient() {
                                     setEditId(null);
                                     chargerEtudiants();
                                 }}
-                                className="bg-slate-300 rounded-lg p-4 border border-white/20 text-white mb-4"
+                                className="rounded-lg p-4 border border-white/20 text-white mb-4"
                             >
                                 <h3 className="font-semibold mb-4">Modifier étudiant</h3>
 

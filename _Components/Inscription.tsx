@@ -125,8 +125,8 @@ function Inscription() {
                 className="bg-white text-black w-full p-3 rounded-lg"
                 onChange={handleChange}
               >
-                <option value="Debutant">Debutant</option>
-                <option value="Excellent">Excellent</option>
+                <option value="Debutant">Débutant</option>
+                <option value="Excellent">Excellent (e)</option>
               </select>
 
             </div>

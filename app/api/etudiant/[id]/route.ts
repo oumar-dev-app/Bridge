@@ -1,28 +1,70 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 
-export const PUT: any = async (request: NextRequest, context: any) => {
-  const id = Number(context.params.id);
-  if (isNaN(id)) return NextResponse.json({ message: "ID invalide" });
+type Params = {
+  id: string;
+};
+
+/* ========================= PUT ========================= */
+export const PUT = async (
+  request: NextRequest,
+  { params }: { params: Promise<Params> }
+) => {
+  const { id } = await params;
+  const etudiantId = Number(id);
+
+  if (isNaN(etudiantId)) {
+    return NextResponse.json(
+      { message: "ID invalide" },
+      { status: 400 }
+    );
+  }
 
   const body = await request.json();
   const { nom, prenom, email, telephone, niveauAnglais, quartier } = body;
 
   const [result]: any = await db.execute(
-    `UPDATE inscription SET nom=?, prenom=?, email=?, telephone=?, niveauAnglais=?, quartier=? WHERE id=?`,
-    [nom, prenom, email, telephone, niveauAnglais, quartier, id]
+    `UPDATE inscription
+     SET nom=?, prenom=?, email=?, telephone=?, niveauAnglais=?, quartier=?
+     WHERE id=?`,
+    [nom, prenom, email, telephone, niveauAnglais, quartier, etudiantId]
   );
 
-  return NextResponse.json({ message: "Étudiant modifié", affectedRows: result.affectedRows });
+  return NextResponse.json({
+    message: "Étudiant modifié",
+    affectedRows: result.affectedRows,
+  });
 };
 
-export const DELETE: any = async (request: NextRequest, context: any) => {
-  const id = Number(context.params.id);
-  if (isNaN(id)) return NextResponse.json({ message: "ID invalide" });
+/* ========================= DELETE ========================= */
+export const DELETE = async (
+  request: NextRequest,
+  { params }: { params: Promise<Params> }
+) => {
+  const { id } = await params;
+  const etudiantId = Number(id);
 
-  const [result]: any = await db.execute("DELETE FROM inscription WHERE id = ?", [id]);
+  if (isNaN(etudiantId)) {
+    return NextResponse.json(
+      { message: "ID invalide" },
+      { status: 400 }
+    );
+  }
 
-  if (result.affectedRows === 0) return NextResponse.json({ message: "Aucun étudiant trouvé" }, { status: 404 });
+  const [result]: any = await db.execute(
+    "DELETE FROM inscription WHERE id = ?",
+    [etudiantId]
+  );
 
-  return NextResponse.json({ message: "Étudiant supprimé", affectedRows: result.affectedRows });
+  if (result.affectedRows === 0) {
+    return NextResponse.json(
+      { message: "Aucun étudiant trouvé" },
+      { status: 404 }
+    );
+  }
+
+  return NextResponse.json({
+    message: "Étudiant supprimé",
+    affectedRows: result.affectedRows,
+  });
 };
