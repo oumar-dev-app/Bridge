@@ -42,8 +42,8 @@ function Message() {
   };
   return (
     <div className='mt-2 space-y-4'>
-      <h1 className='font-semibold'>Envoyer nous un message</h1>
-      <p className='text-sm'>Dit nous comment nous pouvons vous aidez. Bridge fera de son possible pour vous répondrez à temps. </p>
+      <h1 className='font-semibold'>Envoyez-nous un message</h1>
+      <p className='text-sm'>Dis-nous comment nous pourrons vous aider et nous vous nous ferons tout notre possible pour vous répondre à temps.</p>
       <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
 
 

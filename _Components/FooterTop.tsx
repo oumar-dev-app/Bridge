@@ -18,17 +18,17 @@ const data: ContactItem[] = [
         icon: (<MapPin size={30} className='text-white/20' />)
     },
     {
-        title: "Applle nous",
+        title: "Appelez-nous",
         subtitle: "+223-78-90-23-89",
         icon: (<Phone size={30} className='text-white/20' />)
     },
     {
-        title: "Nos address email",
+        title: "Notre adresse email",
         subtitle: "bridgemail@gmail.com",
         icon: (<Mail size={30} className='text-white/20' />)
     },
     {
-        title: "Nous contact sur whatsapp",
+        title: "Contactez-nous sur WhatsApp",
         subtitle: "+223-77-25-24-10",
         icon: (<SiWhatsapp size={30} className='text-white/20'/>)
     },

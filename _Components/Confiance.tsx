@@ -6,7 +6,7 @@ function Confiance() {
     return (
         <div className='bg-gray-500 mb-10 p-5'>
             <Container>
-                <h1 className='text-2xl font-semibold text-center text-white mb-8'>Il nous fait confiance !</h1>
+                <h1 className='text-2xl font-semibold text-center text-white mb-8'>Ils nous ont fait confiance !</h1>
                 <div className='py-6   grid grid-cols-1 gap-10 m-5 md:grid-cols-2  lg:grid-cols-3'>
                     <div className='space-y-3 text-white flex m-auto flex-col justify-center'>
                         <Image

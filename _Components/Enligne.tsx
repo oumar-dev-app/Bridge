@@ -13,10 +13,10 @@ function Enligne() {
                                     <p className="text-center text-white font-semibold">Cours en ligne</p>
 
                                 </div>
-                                <p className="">Chez bridge nous croyons que l'apprentissage de l'Anglais ne dévrait pas etre limité par la distances ou les barrières
-                                    géographiques. Spécialialisés dans les cours d'Anglais en ligne, nous offrons des formations de haute qualité, accessibles
-                                    et flexibles, conçues pour répondre à vos bésion spécifique. Que vous souhaitez amélorer vos compétences
-                                    professionnelles ou simplement converser avec aisance. nous sommes là pour vous accompagner.</p>
+                                <p className="">Chez bridge nous croyons que l'apprentissage de l'Anglais ne dévrait pas être limité par la distance ou les barrières géographiques. 
+                                    Fort des années d’expériences, nous offrons des formations de haute qualité, accessibles et flexibles, conçues pour répondre à vos besoins spécifiques. 
+                                    Que vous souhaitiez donner un coup d’accélérateur a votre carrière ou simplement voyager sans limites, 
+                                    nous sommes là pour vous accompagner.</p>
                             </div>
                             <div>
                                 <Image 

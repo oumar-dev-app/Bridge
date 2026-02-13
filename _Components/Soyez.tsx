@@ -12,8 +12,9 @@ function Soyez() {
                                 <p className="text-center text-white font-semibold">Où que vous soyez</p>
 
                             </div>
-                            <p>Bridge est un cabinet de formation Spécialialisés dans les cours d'Anglais en ligne. Avec des années d'expériences
-                                dans l'enseignement de l'Anglais, nous avons développé des méthodes pédagogiques innovantes et efficaces.
+                            <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. 
+                                Avec des années d'expériences dans l'enseignement de l'Anglais, 
+                                nous avons développé des méthodes pédagogiques innovantes et efficaces. 
                                 Nos formateurs sont certifiés et possèdent une expertise reconnue dans leur domaine.
                             </p>
                         </div>
