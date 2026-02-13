@@ -47,7 +47,7 @@ function FooterTop() {
                     </div>
                 )
             })}
-            <WhatsappBtn />
+           
         </div>
     )
 }

@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div>
             <FooterTop />
-            
+             <WhatsappBtn />
           </div>
           <div className='flex w-full justify-center'>
             <Message />
