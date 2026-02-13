@@ -1,30 +1,64 @@
-import { MapPin } from "lucide-react";
 import Container from "./Container";
+import Link from "next/link";
+
+const gb = [
+    { ImgSrc: '/bg.jpeg' }
+];
 
 export default function AboutText() {
-    return(
-        <>
-         <div>
-            <Container>
-                <div className="grid grid-cols-2">
-                    <div className="border border-blue-500 rounded-lg bg-white/20">
-                        <h1 className="font-bold text-2xl">Qui sommes-nous ?</h1>
-                        <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. 
-                            Notre but est de rendre le monde plus petit en servant de pont entre les individus, les cultures. 
-                            En plus des cours en ligne, nous offrons des cours présentiels. 
-                            Nous utilisons des méthodes simples et pratiques.</p>
-                    </div>
+    return (
+        <Container>
+            {gb.map((src) => {
+                return (
+                    <div
+                        style={{ backgroundImage: `url(${src.ImgSrc})` }}
+                        className="bg-center bg-cover "
+                    >
+                        <Container>
+                            <div className="grid grid-cols-1 bg-white/80 gap-10 lg:grid-cols-1 absolue p-12">
+                                <div className="flex justify-start mt-10 ">
+                                    <div className=" p-4 space-y-5 border text-white border-gray-300 shadow-2xl bg-blue-950 rounded-lg ">
+                                        <h1 className="font-bold text-2xl">Qui sommes-nous ?</h1>
+                                        <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. <br />
+                                            Notre but est de rendre le monde plus petit en servant de pont entre les individus,  les cultures. <br />
+                                            En plus des cours en ligne, nous offrons des cours présentiels. <br />
+                                            Nous utilisons des méthodes simples et pratiques.</p>
+                                    </div>
+                                </div>
 
-                    <div className="border border-blue-500 rounded-lg bg-white/20">
-                        <h1 className="font-bold text-2xl">Où sommes-nous ?</h1>
-                        <MapPin/>
-                        <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
-                            Contact : 223 78 90 23 89</p>
+                                <div className="flex justify-end">
+                                    <div className="p-4 shadow-2xl space-y-5 text-white border bg-blue-950 border-gray-300 relative rounded-lg ">
+                                        <h1 className="font-bold text-2xl">Où sommes-nous ?</h1>
+                                        <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
+                                            Contact : 223 78 90 23 89</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-start mb-10">
+                                    <div className=" p-4 space-y-5  text-white shadow-2xl bg-blue-950  rounded-lg ">
+                                        <h1 className="font-bold text-2xl">Nos programmes</h1>
+                                        <p>Cours en groupe (jours, heures, frais, inscription) <br />
+                                            Cours individuel (jours, heures, frais, inscription) <br />
+                                            Cours en ligne (jours, heures, frais, inscription) <br />
+                                        </p>
+
+                                        <div className="flex justify-end">
+                                            <Link href={"/programme"}
+                                                className="border-2 border-white hover:bg-gray-200 hoverEffect bg-white text-black p-2 rounded-lg"
+                                            >
+                                                <button className="cursor-pointer">En savoir plus</button>
+                                            </Link>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Container>
                     </div>
-                </div>
-            </Container>
-         </div>
-        </>
+                );
+            })}
+
+        </Container>
     )
 };
 
