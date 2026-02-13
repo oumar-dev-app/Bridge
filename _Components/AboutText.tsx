@@ -8,6 +8,16 @@ export default function AboutText() {
                 <div>
                     <div>
                         <h1>Qui sommes-nous ?</h1>
+                        <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. 
+                            Notre but est de rendre le monde plus petit en servant de pont entre les individus, les cultures. 
+                            En plus des cours en ligne, nous offrons des cours présentiels. 
+                            Nous utilisons des méthodes simples et pratiques.</p>
+                    </div>
+
+                    <div>
+                        <h1>Où sommes-nous ?</h1>
+                        <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
+                            Contact : 223 78 90 23 89</p>
                     </div>
                 </div>
             </Container>
