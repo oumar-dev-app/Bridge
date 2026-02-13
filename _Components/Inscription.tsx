@@ -13,6 +13,7 @@ function Inscription() {
     email: "",
     telephone: "",
     niveauAnglais: "Debutant",
+    pays: "",
     quartier: "",
   });
 
@@ -42,7 +43,9 @@ function Inscription() {
         email: "",
         telephone: "",
         niveauAnglais: "Debutant",
+        pays: "",
         quartier: "",
+
       });
 
 

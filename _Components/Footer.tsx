@@ -7,6 +7,7 @@ import AdminBtn from './AdminBtn';
 import IconsFooter from './IconsFooter';
 import LoginBtnFooter from './LoginBtnFooter';
 import AdressMap from './AdressMap';
+import WhatsappBtn from './WhatsappBtn';
 
 
 
@@ -28,6 +29,7 @@ const Footer = () => {
           </div>
           <div>
             <FooterTop />
+            
           </div>
           <div className='flex w-full justify-center'>
             <Message />

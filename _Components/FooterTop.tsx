@@ -2,6 +2,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import React from 'react';
 import { SiWhatsapp } from 'react-icons/si';
+import WhatsappBtn from './WhatsappBtn';
 
 
 
@@ -27,11 +28,6 @@ const data: ContactItem[] = [
         subtitle: "bridgemail@gmail.com",
         icon: (<Mail size={30} className='text-white/20' />)
     },
-    {
-        title: "Contactez-nous sur WhatsApp",
-        subtitle: "+223-77-25-24-10",
-        icon: (<SiWhatsapp size={30} className='text-white/20'/>)
-    },
 ]
 
 function FooterTop() {
@@ -40,7 +36,7 @@ function FooterTop() {
             {data?.map((items, index) => {
                 return (
                     <div key={index} className='flex items-center gap-3 group hover:bg-gray-700 p-4 rounded-lg   ' >
-                            {items?.icon}
+                        {items?.icon}
 
                         <div className='space-y-2'>
                             <h3 className='font-semibold text-sm'>{items?.title}</h3>
@@ -51,7 +47,7 @@ function FooterTop() {
                     </div>
                 )
             })}
-
+            <WhatsappBtn />
         </div>
     )
 }

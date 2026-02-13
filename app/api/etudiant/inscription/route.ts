@@ -9,6 +9,7 @@ export async function POST(req: Request) {
       email,
       telephone,
       niveauAnglais,
+      pays,
       quartier,
     } = await req.json();
 
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
 
     const sql = `
       INSERT INTO inscription
-      (nom, prenom, email, telephone, niveauAnglais, quartier)
+      (nom, prenom, email, telephone, niveauAnglais, pays, quartier)
       VALUES (?, ?, ?, ?, ?, ?)
     `;
 
@@ -31,6 +32,7 @@ export async function POST(req: Request) {
       email,
       telephone,
       niveauAnglais,
+      pays,
       quartier,
     ]);
 
