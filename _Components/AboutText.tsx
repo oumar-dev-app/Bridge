@@ -44,7 +44,7 @@ export default function AboutText() {
 
                                         <div className="flex justify-end">
                                             <Link href={"/programme"}
-                                                className="border-2 border-white hover:bg-gray-200 hoverEffect bg-white text-black p-2 rounded-lg"
+                                                className="border-2 border-white text-sm font-bold hover:bg-gray-200 hoverEffect bg-white text-black p-2 rounded-lg"
                                             >
                                                 <button className="cursor-pointer">En savoir plus</button>
                                             </Link>
