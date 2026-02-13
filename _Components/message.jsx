@@ -53,7 +53,7 @@ function Message() {
           onChange={(e) => setEmail(e.target.value)}
           name="email"
           id="email"
-          required placeholder='Votre address email'
+          required placeholder='Votre adresse email'
           className='border  p-2 text-black rounded-lg outline-0  bg-white border-white'
         />
 

@@ -40,7 +40,7 @@ const Footer = () => {
       <Container>
         <div className='border-t mt-2 border-white/20'>
           <LogoFooter />
-          <p className='text-center text-sm font-semibold'>CopyRigth©2026 by Bridge  2026</p>
+          <p className='text-center text-sm font-semibold'>Copyright©2026 by Bridge  2026</p>
         </div>
       </Container>
     </footer >

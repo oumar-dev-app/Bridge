@@ -50,7 +50,7 @@ function SliderImage() {
                         transform: `translateX(-${currentIndex * 100}%)`,
                     }}
                 >
-                    {Images.map((item) => (
+                    {Images.map((item, index) => (
                         <div
                             key={item.id}
                             className="w-full transition-tranform duration-700 h-200 relative bg-center bg-cover  rounded-lg shrink-0"
@@ -60,7 +60,7 @@ function SliderImage() {
                             <div className="w-full h-full bg-black/40 absolute top-0 left-0 gb-gradient-to-b from-transparent to-black/90"></div>
 
                             {/* Contenu */}
-                            <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">
+                           { currentIndex ==index &&  <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">
                                 <h2 className="text-5xl text-white font-extrabold uppercase">
                                     {item.title}
                                 </h2>
@@ -79,6 +79,8 @@ function SliderImage() {
                                     </button>
                                 </div>
                             </div>
+                            }
+                            {/*  */}
                         </div>
                     ))}
                 </div>
