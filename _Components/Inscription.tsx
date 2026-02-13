@@ -131,6 +131,19 @@ function Inscription() {
 
             </div>
 
+            <div className="flex flex-col space-y-2">
+              <label className="text-sm font-semibold">Quartier <span className="text-red-600">*</span></label>
+              <input
+                type="text"
+                name="pays"
+                value={formData.quartier}
+                placeholder="Votre pays"
+                required
+                className="bg-white rounded-lg p-3 text-black outline"
+                onChange={handleChange}
+              />
+
+            </div>
 
             <div className="flex flex-col space-y-2">
               <label className="text-sm font-semibold">Quartier <span className="text-red-600">*</span></label>
