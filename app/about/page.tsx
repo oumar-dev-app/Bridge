@@ -4,8 +4,8 @@ import AboutText from "@/_Components/AboutText";
 export default function About (){
     return (
         <div>
-            <AboutSlider/>
-            <AboutText/>
+           {/*  <AboutSlider/>
+            <AboutText/> */}
         </div>
     )
 }

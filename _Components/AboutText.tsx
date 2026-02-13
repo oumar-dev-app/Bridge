@@ -1,3 +1,4 @@
+import { MapPin } from "lucide-react";
 import Container from "./Container";
 
 export default function AboutText() {
@@ -16,6 +17,7 @@ export default function AboutText() {
 
                     <div className="border border-blue-500 rounded-lg bg-white/20">
                         <h1 className="font-bold text-2xl">Où sommes-nous ?</h1>
+                        <MapPin/>
                         <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
                             Contact : 223 78 90 23 89</p>
                     </div>
