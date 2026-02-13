@@ -45,7 +45,7 @@ function SliderImage() {
             <div className="w-full h-130 rounded-lg  overflow-hidden  relative">
                 {/* SLIDER */}
                 <div
-                    className="flex h-full transition-transform duration-700 ease-in-out"
+                    className="flex h-full transition-transform duration-800 ease-in-out"
                     style={{
                         transform: `translateX(-${currentIndex * 100}%)`,
                     }}
