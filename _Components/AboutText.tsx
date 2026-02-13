@@ -5,7 +5,7 @@ export default function AboutText() {
         <>
          <div>
             <Container>
-                <div className="grid grid-cols-1">
+                <div className="grid grid-cols-2">
                     <div className="border border-blue-500 rounded-lg bg-white/20">
                         <h1 className="font-bold text-2xl">Qui sommes-nous ?</h1>
                         <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. 
