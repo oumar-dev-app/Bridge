@@ -2,7 +2,8 @@ import Container from "./Container";
 import Link from "next/link";
 
 const gb = [
-    { ImgSrc: '/bg.jpeg' }
+
+    { ImgSrc: '/bg.jpeg', id:1 }
 ];
 
 export default function AboutText() {
@@ -10,14 +11,14 @@ export default function AboutText() {
         <Container>
             {gb.map((src) => {
                 return (
-                    <div
+                    <div key={src.id}
                         style={{ backgroundImage: `url(${src.ImgSrc})` }}
                         className="bg-center bg-cover "
                     >
                         <Container>
                             <div className="grid grid-cols-1 bg-white/80 gap-10 lg:grid-cols-1 absolue p-12">
                                 <div className="flex justify-start mt-10 ">
-                                    <div className=" p-6 space-y-5 border text-white border-gray-300 shadow-2xl bg-blue-950 rounded-lg ">
+                                    <div className=" p-6 space-y-5  text-white  shadow-2xl bg-blue-950 rounded-lg ">
                                         <h1 className="font-bold text-2xl">Qui sommes-nous ?</h1>
                                         <p>Bridge est un cabinet de formation spécialisé dans les cours d'Anglais en ligne. <br />
                                             Notre but est de rendre le monde plus petit en servant de pont entre les individus,  les cultures. <br />
@@ -27,7 +28,7 @@ export default function AboutText() {
                                 </div>
 
                                 <div className="flex justify-end">
-                                    <div className="p-6 shadow-2xl space-y-5 text-white border bg-blue-950 border-gray-300 relative rounded-lg ">
+                                    <div className="p-6 shadow-2xl space-y-5 text-white  bg-blue-950 relative rounded-lg ">
                                         <h1 className="font-bold text-2xl">Où sommes-nous ?</h1>
                                         <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
                                             Contact : 223 78 90 23 89</p>

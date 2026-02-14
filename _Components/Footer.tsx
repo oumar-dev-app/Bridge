@@ -15,18 +15,21 @@ const Footer = () => {
   return (
     <footer className='bg-blue-950 text-white'>
       <Container>
+        {/* Les reseaux sociaus */}
         <div>
           <IconsFooter />
         </div>
       </Container>
       <Container>
         <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
+          {/* Lien et inscript et partie admin */}
           <div className='lg:space-y-8'>
             <h1 className=' font-semibold'>Liens rapide</h1>
             <FooterLink />
             <LoginBtnFooter />
             <AdminBtn />
           </div>
+          {/* Les adresses et contact */}
           <div>
             <FooterTop />
              <WhatsappBtn />
@@ -34,15 +37,17 @@ const Footer = () => {
           <div className='flex w-full justify-center'>
             <Message />
           </div>
+          {/* La localisation */}
           <div >
             <AdressMap/>
           </div>
         </div>
       </Container>
       <Container>
+        {/* Signe par: */}
         <div className='border-t mt-2 border-white/20'>
           <LogoFooter />
-          <p className='text-center text-sm font-semibold'>Copyright©2026 by Bridge  2026</p>
+          <p className='text-center text-sm font-semibold'>Copyright©2026 by Bridge</p>
         </div>
       </Container>
     </footer >

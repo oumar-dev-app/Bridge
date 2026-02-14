@@ -42,7 +42,7 @@ function SliderImage() {
 
     return (
         <Container>
-            <div className="w-full h-130 rounded-lg  overflow-hidden  relative">
+            <div className="w-full h-130  overflow-hidden  relative">
                 {/* SLIDER */}
                 <div
                     className="flex h-full transition-transform duration-800 ease-in-out"
@@ -53,7 +53,7 @@ function SliderImage() {
                     {Images.map((item, index) => (
                         <div
                             key={item.id}
-                            className="w-full transition-tranform duration-700 h-200 relative bg-center bg-cover  rounded-lg shrink-0"
+                            className="w-full transition-tranform duration-700 h-200 relative bg-center bg-cover shrink-0"
                             style={{ backgroundImage: `url(${item.ImageSrc})` }}
                         >
                             {/* Overlay */}

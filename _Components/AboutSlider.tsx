@@ -8,20 +8,14 @@ const Images = [
     {
         id: 1,
         ImageSrc: '/aboutImg1.jpeg',
-        title: 'Cours en ligne',
-        desc: `En ligne, nous offrons des formations de haute qualité, accessibles et flexibles, conçues pour répondre à vos besoins spécifiques.`,
+        title: '',
+        desc: `Chez bridge formez est un art`,
     },
     {
         id: 2,
         ImageSrc: '/aboutImg2.jpeg',
-        title: 'Cours présentiel',
-        desc: `Nos formateurs se déplacent chez vous ou vous accueillent dans nos centres de formation.`,
-    },
-    {
-        id: 3,
-        ImageSrc: '/slider1.jpeg',
-        title: 'Où que vous soyez',
-        desc: `Apprenez à votre rythme, où que vous soyez.`,
+        title: '',
+        desc: `Avec bridge anticipez le futur`,
     },
 ];
 
@@ -65,11 +59,11 @@ function AboutSlider() {
                                     {item.title}
                                 </h2>
 
-                                <p className="text-white/95  w-76  space-x-1 text-md">
+                                <p className="text-white/95  w-76 text-2xl space-x-1 text-md">
                                     {item.desc}
                                 </p>
 
-                                <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+                           {/*      <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
 
                                     <button
                                         onClick={() => router.push('/inscription')}
@@ -77,7 +71,7 @@ function AboutSlider() {
                                     >
                                         Je m’inscris
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                             }
                             {/*  */}
