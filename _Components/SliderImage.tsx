@@ -61,7 +61,7 @@ function SliderImage() {
 
                             {/* Contenu */}
                            { currentIndex ==index &&  <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">
-                                <h2 className="text-5xl text-white font-extrabold  uppercase">
+                                <h2 className="text-5xl text-white font-extrabold mr-2 uppercase">
                                     {item.title}
                                 </h2>
 
