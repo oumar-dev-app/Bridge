@@ -1,12 +1,46 @@
-
 import Container from './Container';
-import Image from 'next/image';
+
+
+const ImgSrc = [
+    {
+        id:1,
+        name: "Manda-SISSOKO",
+        disc: "",
+        img: "/Manda-SISSOKO.jpeg"
+    },
+    {
+        id:2,
+        name: "Moussa-Balla-COULIBALY",
+        disc: "",
+        img: "/Moussa-Balla-COULIBALY.jpeg"
+    },
+    {
+        id:3,
+        name: "Mr-YATARA",
+        disc: "",
+        img: "/Logo2"
+    },
+];
 
 function Confiance() {
     return (
         <div className='bg-gray-500 mb-10 p-5'>
             <Container>
-                <h1 className='text-2xl font-semibold text-center text-white mb-8'>Ils nous ont fait confiance !</h1>
+            {ImgSrc.map((item) => {
+                return(
+                    <div key={item.id}>
+                        {item.img}
+                    </div>
+                );
+            })}
+
+
+
+
+
+
+
+                {/* <h1 className='text-2xl font-semibold text-center text-white mb-8'>Ils nous ont fait confiance !</h1>
                 <div className='py-6   grid grid-cols-1 gap-10 m-5 md:grid-cols-2  lg:grid-cols-3'>
                     <div className='space-y-3 text-white flex m-auto flex-col justify-center'>
                         <Image
@@ -24,7 +58,7 @@ function Confiance() {
                             alt='Moussa'
                             width={200}
                             height={200}
-                            priority className='rounded-full'/>
+                            priority className='rounded-full' />
 
                         <p className='text-sm font-semibold'>Moussa Balla COULIBALY</p>
                     </div>
@@ -38,9 +72,9 @@ function Confiance() {
 
                         <p className='text-sm ml-8 font-semibold'>Mr.YATARA</p>
                     </div>
-                 
 
-                </div>
+
+                </div> */}
             </Container>
         </div>
     )
