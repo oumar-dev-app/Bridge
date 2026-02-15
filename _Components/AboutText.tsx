@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const gb = [
 
-    { ImgSrc: '/bg.jpeg', id:1 }
+    { ImgSrc: '/bg.jpeg', id: 1 }
 ];
 
 export default function AboutText() {
@@ -31,16 +31,17 @@ export default function AboutText() {
                                     <div className="p-6 shadow-2xl space-y-5 text-white  bg-blue-950 relative rounded-lg ">
                                         <h1 className="font-bold text-2xl">Où sommes-nous ?</h1>
                                         <p>Kalaban Coura ACI en face de la pharmacie Djouma Barry, Bamako <br />
-                                            Contact : 223 78 90 23 89</p>
+                                            Contact : +223 78 90 23 89</p>
                                     </div>
                                 </div>
 
                                 <div className="flex justify-start mb-10">
-                                    <div className=" p-6 space-y-5  text-white shadow-2xl bg-blue-950  rounded-lg ">
+                                    <div className=" p-6 space-y-8 text-white shadow-2xl bg-blue-950  rounded-lg ">
                                         <h1 className="font-bold text-2xl">Nos programmes</h1>
-                                        <p>Cours en groupe (jours, heures, frais, inscription) <br />
-                                            Cours individuel (jours, heures, frais, inscription) <br />
-                                            Cours en ligne (jours, heures, frais, inscription) <br />
+                                        <p className="space-y-4">
+                                            <span className="border border-red-500 rounded-2xl text-red-500 bg-red-500 w-2 h-auto">¤</span> Cours en groupe<br />
+                                            <span className="border border-red-500 rounded-2xl text-red-500 bg-red-500 w-2 h-auto">¤</span> Cours individuel<br />
+                                            <span className="border border-red-500 rounded-2xl text-red-500 bg-red-500 w-2 h-auto">¤</span> Cours en ligne<br />
                                         </p>
 
                                         <div className="flex justify-end">
