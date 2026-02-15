@@ -38,11 +38,11 @@ export default function AboutText() {
                                 <div className="flex justify-start mb-10">
                                     <div className=" p-6 space-y-8 text-white shadow-2xl bg-blue-950  rounded-lg ">
                                         <h1 className="font-bold text-2xl">Nos programmes</h1>
-                                        <p className="space-y-8">
-                                            <span className="rounded-2xl text-red-500 bg-red-500 w-3">.</span> Cours en groupe<br />
-                                            <span className="rounded-2xl text-red-500 bg-red-500 w-3">.</span> Cours individuel<br />
-                                            <span className="rounded-2xl text-red-500 bg-red-500 w-3">.</span> Cours en ligne<br />
-                                        </p>
+                                        <div className="space-y-5">
+                                            <p><span className="rounded-2xl text-red-500 bg-red-500">¤</span> Cours en groupe<br /></p>
+                                            <p><span className="rounded-2xl text-red-500 bg-red-500">¤</span> Cours individuel<br /></p>
+                                            <p><span className="rounded-2xl text-red-500 bg-red-500">¤</span> Cours en ligne<br /></p>                   
+                                        </div>
 
                                         <div className="flex justify-end">
                                             <Link href={"/programme"}
