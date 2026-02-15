@@ -36,7 +36,7 @@ function AboutSlider() {
 
     return (
         <Container>
-            <div className="w-full h-130 rounded-t-lg  overflow-hidden  relative">
+            <div className="w-full h-130 rounded-t-lg no-scroll overflow-hidden  relative">
                 {/* SLIDER */}
                 <div
                     className="flex h-full transition-transform duration-800 ease-in-out"
