@@ -7,7 +7,7 @@ import Container from './Container';
 const Images = [
     {
         id: 1,
-        ImageSrc: '/aboutImg1.jpeg',
+        ImageSrc: '/bg.jpeg',
         title: '',
         desc: `Chez bridge formez est un art`,
     },
