@@ -55,23 +55,9 @@ function AboutSlider() {
 
                             {/* Contenu */}
                            { currentIndex ==index &&  <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">
-                                <h2 className="text-5xl text-white font-extrabold uppercase">
-                                    {item.title}
-                                </h2>
-
-                                <p className="text-white/95  w-76 text-2xl space-x-1 text-md">
+                                <p className="text-white/95  w-76 text-3xl font-semibold space-x-1 text-md">
                                     {item.desc}
                                 </p>
-
-                           {/*      <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
-
-                                    <button
-                                        onClick={() => router.push('/inscription')}
-                                        className="bg-white border-2 border-white py-2 px-4 w-45 rounded-lg text-black hover:bg-gray-300 transition"
-                                    >
-                                        Je m’inscris
-                                    </button>
-                                </div> */}
                             </div>
                             }
                             {/*  */}
