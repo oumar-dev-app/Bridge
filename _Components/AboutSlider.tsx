@@ -47,7 +47,7 @@ function AboutSlider() {
                     {Images.map((item, index) => (
                         <div
                             key={item.id}
-                            className="w-full transition-tranform rounded-t-lg duration-700 h-200 relative bg-center bg-cover  rounded-lg shrink-0"
+                            className="w-full transition-tranform rounded-t-lg duration-700 h-200 relative no-scroll bg-center bg-cover  rounded-lg shrink-0"
                             style={{ backgroundImage: `url(${item.ImageSrc})` }}
                         >
                             {/* Overlay */}
