@@ -55,7 +55,7 @@ function AboutSlider() {
 
                             {/* Contenu */}
                            { currentIndex ==index &&  <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">
-                                <p className="text-white/95  w-76 text-4xl font-semibold space-x-1 text-md">
+                                <p className="text-white/95  w-76 text-3xl font-semibold space-x-1 text-md">
                                     {item.desc}
                                 </p>
                             </div>
