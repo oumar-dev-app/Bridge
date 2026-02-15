@@ -12,7 +12,7 @@ function WhatsappBtn() {
       target="_blank"
       rel="noopener noreferrer"
       className="text-sm font-bold border-2 mx-auto border-green-500 
-      rounded-lg p-2 w-50 hover:bg-green-200 hoverEffect shadow-2xl 
+      rounded-lg p-2 w-50 hover:bg-green-700 hoverEffect shadow-2xl 
       flex items-center gap-3 cursor-pointer"
     >
       <SiWhatsapp size={30} className="text-green-500" />
