@@ -26,10 +26,10 @@ export default function Carousel() {
     <div className=" w-full max-w-7xl mx-auto">
       <h1 className='text-center text-2xl font-semibold text-white'>Il nous fait confiance !</h1>
       <div className='overflow-hidden'>
-        <div className='py-6  grid grid-cols-1 gap-6 m-5 md:grid-cols-2  lg:grid-cols-4'>
+        <div className='py-6  grid grid-cols-1 gap-6 m-5 md:grid-cols-2 lg:grid-cols-4'>
           {sliders.map((item) => {
             return(
-              <div className='bg-white w-75 rounded-lg   space-y-5'>
+              <div className='bg-white w-75 rounded-lg  shadow-lg  space-y-5'>
               <Image
               src={item.srcImage}
               alt='image'
