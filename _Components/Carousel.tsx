@@ -24,7 +24,7 @@ export default function Carousel() {
 
   return (
     <div className=" w-full max-w-7xl mx-auto">
-      <h1 className='text-center text-2xl font-semibold text-white'>Il nous fait confiance !</h1>
+      <h1 className='text-center text-2xl font-semibold text-white'>Ils nous ont fait confiance !</h1>
       <div className='overflow-hidden'>
         <div className='py-6  grid grid-cols-1 gap-6 m-5 md:grid-cols-2 lg:grid-cols-4'>
           {sliders.map((item) => {
