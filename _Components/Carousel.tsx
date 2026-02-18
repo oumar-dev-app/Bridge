@@ -29,14 +29,14 @@ export default function Carousel() {
         <div className='py-6  grid grid-cols-1 gap-6 m-5 md:grid-cols-2  lg:grid-cols-4'>
           {sliders.map((item) => {
             return(
-              <div className='bg-white w-75 rounded-lg m-2  space-y-5'>
+              <div className='bg-white w-75 rounded-lg   space-y-5'>
               <Image
               src={item.srcImage}
               alt='image'
               height={300}
               width={300}
               priority
-              className=' rounded-t-lg m-auto'
+              className=' rounded-t-lg '
               />
               <div className='space-y-5 m-2'>
                 <h1 className='text-md font-bold'>{item.title}</h1>
