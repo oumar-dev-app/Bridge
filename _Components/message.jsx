@@ -43,7 +43,7 @@ function Message() {
   return (
     <div className='mt-2 space-y-4'>
       <h1 className='font-semibold'>Envoyez-nous un message</h1>
-      <p className='text-sm'>Dis-nous comment nous pourrons vous aider et nous vous nous ferons tout notre possible pour vous répondre à temps.</p>
+      <p className='text-sm'>Dis-nous comment nous pourrons vous aider et nous ferons tout notre possible pour vous répondre à temps.</p>
       <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
 
 

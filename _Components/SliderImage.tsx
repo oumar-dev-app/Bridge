@@ -42,7 +42,7 @@ function SliderImage() {
 
     return (
         <Container>
-            <div className="w-full h-130 no-scroll  overflow-hidden rounded-lg  relative">
+            <div className="w-full h-130 no-scroll overflow-hidden rounded-lg  relative">
                 {/* SLIDER */}
                 <div
                     className="flex h-full transition-transform duration-800 ease-in-out"
