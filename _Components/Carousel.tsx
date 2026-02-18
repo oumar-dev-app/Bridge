@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import { it } from 'node:test';
 
 const sliders = [
   { id: 1, 
@@ -29,7 +30,8 @@ export default function Carousel() {
         <div className='py-6  grid grid-cols-1 gap-6 m-5 md:grid-cols-2 lg:grid-cols-4'>
           {sliders.map((item) => {
             return(
-              <div className='bg-white w-75 rounded-lg  shadow-lg  space-y-5'>
+              <div key={item.id}
+              className='bg-white w-75 rounded-lg  shadow-lg  space-y-5'>
               <Image
               src={item.srcImage}
               alt='image'
