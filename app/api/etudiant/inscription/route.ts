@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const sql = `
       INSERT INTO inscription
       (nom, prenom, email, telephone, niveauAnglais, pays, quartier)
-      VALUES (?, ?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
     `;
 
     await db.execute(sql, [

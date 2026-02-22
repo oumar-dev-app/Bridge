@@ -14,6 +14,7 @@ export async function GET() {
         email,
         telephone,
         niveauAnglais,
+        pays,
         quartier,
         date_creation
       FROM inscription
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
       email,
       telephone,
       niveauAnglais,
+      pays,
       quartier,
     } = await req.json();
 
@@ -48,7 +50,7 @@ export async function POST(req: Request) {
       `INSERT INTO inscription
        (nom, prenom, email, telephone, niveauAnglais, quartier)
        VALUES (?, ?, ?, ?, ?, ?)`,
-      [nom, prenom, email, telephone, niveauAnglais, quartier]
+      [nom, prenom, email, telephone, niveauAnglais, pays, quartier]
     );
 
     return NextResponse.json({ success: true });

@@ -6,7 +6,7 @@ import DashboardClient from '@/_Components/DashboardClient';
 
 export default async function DashboardPage() {
   const cookieStore = await cookies(); 
-  console.log('COOKIE ADMIN:', cookieStore.get('admin_token'));// ✅ OBLIGATOIRE
+  console.log('COOKIE ADMIN:', cookieStore.get('admin_token'));
   const token = cookieStore.get('admin_token')?.value;
 
   if (!token) redirect('/login');

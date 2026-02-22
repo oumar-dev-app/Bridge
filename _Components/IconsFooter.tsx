@@ -26,7 +26,7 @@ const data = [
     },
     {
         id: 4,
-        title: "linkdin",
+        title: "linkedln",
         icon: (<ImLinkedin2 size={30} className=' text-white ' />),
         href: "https://www.linkedin.com/company/106969544/admin/page-posts/published/"
     },

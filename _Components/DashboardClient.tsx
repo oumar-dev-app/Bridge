@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import Container from '@/_Components/Container';
 import { Mail, Search, Timer, Trash } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -12,6 +11,7 @@ type Etudiant = {
     email: string;
     telephone: string;
     niveauAnglais: string;
+    pays: string;
     quartier: string;
     date_creation: string;
 };
@@ -31,6 +31,7 @@ export default function DashboardClient() {
         email: '',
         telephone: '',
         niveauAnglais: '',
+        pays: '',
         quartier: '',
     });
     const [editId, setEditId] = useState<number | null>(null);
@@ -41,6 +42,7 @@ export default function DashboardClient() {
         email: '',
         telephone: '',
         niveauAnglais: '',
+        pays: '',
         quartier: '',
     });
 
@@ -120,6 +122,7 @@ export default function DashboardClient() {
             email: '',
             telephone: '',
             niveauAnglais: '',
+            pays: '',
             quartier: '',
         });
 
@@ -209,6 +212,7 @@ export default function DashboardClient() {
                                         <p><strong>Email:</strong> {e.email}</p>
                                         <p><strong>Téléphone:</strong> {e.telephone}</p>
                                         <p><strong>Niveau:</strong> {e.niveauAnglais}</p>
+                                        <p><strong>pays:</strong> {e.pays}</p>
                                         <p><strong>Quartier:</strong> {e.quartier}</p>
 
                                     </div>
@@ -226,6 +230,7 @@ export default function DashboardClient() {
                                                             email: e.email,
                                                             telephone: e.telephone,
                                                             niveauAnglais: e.niveauAnglais,
+                                                            pays: e.pays,
                                                             quartier: e.quartier,
                                                         });
                                                     }}

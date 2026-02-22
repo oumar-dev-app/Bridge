@@ -36,6 +36,9 @@ export default function Ajouter({ onSuccess }: { onSuccess: () => void }) {
         <input placeholder="Niveau anglais"
           onChange={e => setForm({ ...form, niveauAnglais: e.target.value })} />
 
+        <input placeholder="Pays"
+          onChange={e => setForm({ ...form, pays: e.target.value })} />
+
         <input placeholder="Quartier"
           onChange={e => setForm({ ...form, quartier: e.target.value })} />
 
