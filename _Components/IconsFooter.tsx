@@ -2,6 +2,7 @@ import { YoutubeIcon } from 'lucide-react';
 import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
 import { SiTiktok } from 'react-icons/si';
 import Link from 'next/link';
+import Container from './Container';
 
 
 const data = [
@@ -34,27 +35,32 @@ const data = [
 
 function IconsFooter() {
     return (
-        <div className='w-7xl border-b border-white/20'>
+        <Container>
+            <div className='border-b border-white/20'>
 
-            <div className='py-6  grid grid-cols-1 gap-2  md:grid-cols-2 lg:grid-cols-4'>
-                {data.map((icons) => {
-                    return (
-                        <div key={icons.id} className='border border-white/20 m-2 w-60 p-2 rounded-lg shadow-lg'>
-                            <Link href={icons.href}
-                                className='flex gap-2 justify-center items-center cursor-pointer hoverEffect'
+                <div className='py-6  grid grid-cols-1 gap-2  md:grid-cols-2 lg:grid-cols-4'>
+                    {data.map((icons) => {
+                        return (
+                            <div
+                                key={icons.id}
+                                className='w-7xl m-auto'
                             >
-                                <button>
-                                    {icons.icon}
-                                </button>
-                                <p className='text-sm font-semibold text-white'>{icons.title}</p>
-                            </Link>
-                        </div>
-                    )
-                })}
+                                <div className='border border-white/20 m-2 w-60 p-2 rounded-lg shadow-lg '>
+                                    <Link href={icons.href}
+                                        className='flex gap-2 justify-center items-center cursor-pointer hoverEffect'
+                                    >
+                                        <button>
+                                            {icons.icon}
+                                        </button>
+                                        <p className='text-sm font-semibold text-white'>{icons.title}</p>
+                                    </Link>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
-
-
-        </div>
+        </Container>
     )
 }
 

@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "_Components/message.jsx", "_Components/LoginAdmin.jsx", "middleware.ts"  ],
+, "_Components/Message.jsx", "_Components/LoginAdmin.jsx", "middleware.ts"  ],
   "exclude": ["node_modules"]
 }

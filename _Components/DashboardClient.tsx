@@ -55,7 +55,7 @@ export default function DashboardClient() {
             });
 
             if (!res.ok) throw new Error();
-            alert("Etudiant supprimè !")
+            alert("Etudiant supprimè avec succè !")
             // Mise à jour immédiate de l’UI
             setEtudiants((prev) => prev.filter((e) => e.id !== id));
         } catch (err) {
@@ -173,16 +173,17 @@ export default function DashboardClient() {
 
                     {activeTab === 'liste' && (
                         <div className="items-center hidden  md:flex  '">
+                            <div className="bg-white p-2 rounded-l-lg">
+                                <Search />
+                            </div>
                             <input
                                 type="search"
                                 placeholder="Rechercher..."
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
-                                className="bg-white p-2 outline-0 rounded-l-lg text-black border"
+                                className="bg-white p-2 outline-0 rounded-r-lg text-black"
                             />
-                            <div className="bg-gray-400 p-2 rounded-r-lg">
-                                <Search />
-                            </div>
+
                         </div>
                     )}
                 </div>
@@ -194,6 +195,57 @@ export default function DashboardClient() {
                         <h2 className="text-xl text-white font-semibold mb-4">
                             Liste des étudiants inscrits
                         </h2>
+                        {/*  FORMULAIRE DE MODIFICATION */}
+                        {editId !== null && (
+                            <form
+                                onSubmit={async (e) => {
+                                    e.preventDefault();
+
+                                    const res = await fetch(`/api/etudiant/${editId}`, {
+                                        method: 'PUT',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify(editForm),
+                                    });
+
+                                    if (!res.ok) {
+                                        alert('Erreur modification');
+                                        return;
+                                    }
+                                    alert("Etudiant modifier avec succè !")
+
+                                    setEditId(null);
+                                    chargerEtudiants();
+                                }}
+                                className="rounded-lg p-4 border border-white/20 text-white mb-4"
+                            >
+                                <h3 className="font-semibold mb-4">Modifier étudiant</h3>
+
+                                {Object.entries(editForm).map(([key, value]) => (
+                                    <input
+                                        key={key}
+                                        value={value}
+                                        onChange={(e) =>
+                                            setEditForm({ ...editForm, [key]: e.target.value })
+                                        }
+                                        className="w-full mb-3 p-2 border border-white/20 rounded "
+                                        required
+                                    />
+                                ))}
+
+                                <div className="flex gap-2 text-sm font-semibold  ">
+                                    <button className="bg-blue-600 px-4 p-2 py-2 rounded-lg text-white">
+                                        Enregistrer
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setEditId(null)}
+                                        className="bg-gray-400 px-4 p-2 py-2 rounded-lg text-white"
+                                    >
+                                        Annuler
+                                    </button>
+                                </div>
+                            </form>
+                        )}
 
                         {loading ? (
                             <p className="text-white"><i>Chargement...</i></p>
@@ -260,56 +312,7 @@ export default function DashboardClient() {
                             ))
                         )}
 
-                        {/*  FORMULAIRE DE MODIFICATION */}
-                        {editId !== null && (
-                            <form
-                                onSubmit={async (e) => {
-                                    e.preventDefault();
 
-                                    const res = await fetch(`/api/etudiant/${editId}`, {
-                                        method: 'PUT',
-                                        headers: { 'Content-Type': 'application/json' },
-                                        body: JSON.stringify(editForm),
-                                    });
-
-                                    if (!res.ok) {
-                                        alert('Erreur modification');
-                                        return;
-                                    }
-
-                                    setEditId(null);
-                                    chargerEtudiants();
-                                }}
-                                className="rounded-lg p-4 border border-white/20 text-white mb-4"
-                            >
-                                <h3 className="font-semibold mb-4">Modifier étudiant</h3>
-
-                                {Object.entries(editForm).map(([key, value]) => (
-                                    <input
-                                        key={key}
-                                        value={value}
-                                        onChange={(e) =>
-                                            setEditForm({ ...editForm, [key]: e.target.value })
-                                        }
-                                        className="w-full mb-3 p-2 border border-white/20 rounded "
-                                        required
-                                    />
-                                ))}
-
-                                <div className="flex gap-2 text-sm font-semibold  ">
-                                    <button className="bg-blue-600 px-4 p-2 py-2 rounded-lg text-white">
-                                        Enregistrer
-                                    </button>
-                                    <button
-                                        type="button"
-                                        onClick={() => setEditId(null)}
-                                        className="bg-gray-400 px-4 p-2 py-2 rounded-lg text-white"
-                                    >
-                                        Annuler
-                                    </button>
-                                </div>
-                            </form>
-                        )}
                     </div>
                 )}
 

@@ -11,9 +11,9 @@ function WhatsappBtn() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm font-bold border-2 mx-auto border-green-500 
+      className="text-sm font-bold border-2  border-green-500 
       rounded-lg p-2 w-50 hover:bg-green-700 hoverEffect shadow-2xl 
-      flex items-center gap-3 cursor-pointer"
+      flex items-center gap-2 mt-5 cursor-pointer"
     >
       <SiWhatsapp size={30} className="text-green-500" />
       Contactez-nous

@@ -57,7 +57,7 @@ function Inscription() {
 
   return (
     <Container>
-      <div className="bg-blue-950 mb-10 rounded-lg text-white p-10 mt-20">
+      <div className="bg-blue-950 mb-10 rounded-lg text-white p-10 mt-20 m-5">
         <h1 className="text-center font-semibold text-3xl">
           FORMULAIRE D'INSCRIPTION
         </h1>
@@ -99,7 +99,7 @@ function Inscription() {
                 type="email"
                 name="email"
                 value={formData.email}
-                placeholder="Votre address email"
+                placeholder="Votre adresse email"
                 required
                 className="bg-white rounded-lg p-3 text-black outline"
                 onChange={handleChange}

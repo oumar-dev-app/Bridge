@@ -5,18 +5,18 @@ import Link from 'next/link';
 const navLink = [
 
     { name: "Accueil", href: "/" },
-    { name: "Nos prgrammes", href: "/programme" },
+    { name: "Nos programmes", href: "/programme" },
     { name: "About", href: "/about" },
 ];
 
 function FooterLink() {
     const pathname = usePathname();
     return (
-        <ul className=' space-y-3'>
+        <div className=' space-y-3'>
             {navLink.map((link) => {
                 const isActive = pathname.startsWith(link.href)
                 return (
-                    <li key={link.name}>
+                    <div key={link.name}>
                         <Link href={link.href}
                             className={`hover:text-red-500  font-semibold text-sm group hoverEffect ${pathname === link.href ? "text-red-500" : ""}`}
                         >
@@ -24,10 +24,10 @@ function FooterLink() {
 
                         </Link>
 
-                    </li>
+                    </div>
                 )
             })}
-        </ul>
+        </div>
     )
 }
 

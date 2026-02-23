@@ -1,7 +1,7 @@
 import Container from './Container';
 import FooterTop from './FooterTop';
 import FooterLink from './FooterLink';
-import Message from './message';
+import Message from './Message';
 import LogoFooter from './LogoFooter';
 import AdminBtn from './AdminBtn';
 import IconsFooter from './IconsFooter';
@@ -14,32 +14,33 @@ import WhatsappBtn from './WhatsappBtn';
 const Footer = () => {
   return (
     <footer className='bg-blue-950 text-white'>
-      <Container>
+  
         {/* Les reseaux sociaus */}
         <div>
           <IconsFooter />
         </div>
-      </Container>
+    
       <Container>
         <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
           {/* Lien et inscript et partie admin */}
-          <div className='lg:space-y-8'>
-            <h1 className=' font-semibold'>Liens rapide</h1>
+          <div className=' py-3 '>
+            <h1 className='font-semibold py-3'>Liens rapide</h1>
             <FooterLink />
-            <LoginBtnFooter />
-            <AdminBtn />
+            <div className='py-3'>
+              <LoginBtnFooter />
+              <AdminBtn />
+              <WhatsappBtn />
+            </div>
           </div>
-          {/* Les adresses et contact */}
-          <div>
+          <div className='py-3'>
             <FooterTop />
-             <WhatsappBtn />
           </div>
-          <div className='flex w-full justify-center'>
+          <div className='flex w-full justify-center py-3'>
             <Message />
           </div>
           {/* La localisation */}
-          <div >
-            <AdressMap/>
+          <div className='py-3'>
+            <AdressMap />
           </div>
         </div>
       </Container>
