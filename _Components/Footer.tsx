@@ -39,7 +39,7 @@ const Footer = () => {
             <Message />
           </div>
           {/* La localisation */}
-          <div className='py-3'>
+          <div className='py-3 ml-10'>
             <AdressMap />
           </div>
         </div>
