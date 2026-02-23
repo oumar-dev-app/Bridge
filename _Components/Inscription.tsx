@@ -139,7 +139,7 @@ function Inscription() {
               <input
                 type="text"
                 name="pays"
-                value={formData.quartier}
+                value={formData.pays}
                 placeholder="Votre pays"
                 required
                 className="bg-white rounded-lg p-3 text-black outline"
