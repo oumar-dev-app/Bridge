@@ -57,12 +57,12 @@ function Inscription() {
 
   return (
     <Container>
-      <div className="bg-blue-950 mb-10 rounded-lg text-white p-10 mt-20 m-5">
+      <div className="bg-blue-950 mb-8 rounded-lg text-white p-10 mt-6 m-5">
         <h1 className="text-center font-semibold text-3xl">
           FORMULAIRE D'INSCRIPTION
         </h1>
 
-        <div className="w-2/3 mt-10 m-auto">
+        <div className="w-3/4 mt-10 m-auto">
           <form onSubmit={handleSubmit} className="space-y-8">
 
             <div className="flex flex-col space-y-2">
