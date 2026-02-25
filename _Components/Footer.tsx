@@ -22,6 +22,7 @@ const Footer = () => {
     
       <Container>
         <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
+          
           {/* Lien et inscript et partie admin */}
           <div className=' py-3 '>
             <h1 className='font-semibold py-3'>Liens rapide</h1>
@@ -38,6 +39,7 @@ const Footer = () => {
           <div className='flex w-full justify-center py-3'>
             <Message />
           </div>
+
           {/* La localisation */}
           <div className='py-3 ml-10'>
             <AdressMap />
@@ -45,6 +47,7 @@ const Footer = () => {
         </div>
       </Container>
       <Container>
+
         {/* Signe par: */}
         <div className='border-t mt-2 border-white/20'>
           <LogoFooter />

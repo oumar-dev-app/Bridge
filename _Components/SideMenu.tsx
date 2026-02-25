@@ -1,13 +1,11 @@
 'use client';
 import { FC } from 'react'
-import Logo from './Logo';
 import NavLink from './SideMenuLinks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SocialMedia from './SocialMedia';
 import { X } from 'lucide-react';
 import SocialMenuLogo from './SocialMenuLogo';
-import IconsFooter from './IconsFooter';
 import AdminBtn from './AdminBtn';
 
 interface SidebarProps {
@@ -36,10 +34,11 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </button>
                 </div>
                 <div className='flex flex-col text-white space-y-3 font-semibold text-sm tracking-wide'>
+
                     {/* Navigation link */}
                     {NavLink.map((link) => {
                         return (
-                            <Link key={link.href} href={link.href}
+                            <Link key={link.href} href={link.href} onClick={onClose}
                                 className={`hover:text-red-600 hoverEffect 
                             ${pathname === link.href && "text-red-500"}`}
                             >
