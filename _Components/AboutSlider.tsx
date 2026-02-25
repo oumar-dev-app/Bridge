@@ -9,13 +9,13 @@ const Images = [
         id: 1,
         ImageSrc: '/bg.jpeg',
         title: '',
-        desc: `Chez bridge formez est un art`,
+        desc: `Chez Bridge Former est un art`,
     },
     {
         id: 2,
         ImageSrc: '/aboutImg2.jpeg',
         title: '',
-        desc: `Avec bridge anticipez le futur`,
+        desc: `Chez Bridge anticipez le futur`,
     },
 ];
 

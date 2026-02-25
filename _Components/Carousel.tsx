@@ -13,12 +13,12 @@ const sliders = [
     id: 2,
     srcImage: '/etudiant2.jpeg',
     title: 'Makan COULIBALY',
-    dscr: "C'est avec plaisir que je partage mon expérience avec le centre de formation en anglais [BRIDGE MALI]. Grâce à leur programme de formation, j'ai pu améliorer sensiblement mes compétences linguistiques en anglais et renforcer ma confiance pour une communication efficace. "
+    dscr: "C'est avec plaisir que je partage mon expérience avec le centre de formation en anglais BRIDGE MALI. Grâce à leur programme de formation, j'ai pu améliorer sensiblement mes compétences linguistiques en anglais et renforcer ma confiance pour une communication efficace. "
   },
   {
     id: 3,
     srcImage: '/etudiant5.jpeg',
-    title: 'Makan COULIBALY',
+    title: 'Abou CAMARA',
     dscr: "Formation d'excellence ! Merci à Bridge Mali pour l'accompagnement. Je suis passé d'une compréhension limitée à une expression fluide et décomplexée. Le résultat est là : je parle anglais à l'aise !"
   }
 
