@@ -4,7 +4,7 @@ function WhatsappBtn() {
   const phoneNumber = "+223-78-90-23-89";
   const message = "Bonjour, je souhaite avoir plus d'informations.";
 
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/message/77EK6DIZCRHWH1`;
 
   return (
     <a

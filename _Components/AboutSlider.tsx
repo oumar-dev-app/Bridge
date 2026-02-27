@@ -9,7 +9,7 @@ const Images = [
         id: 1,
         ImageSrc: '/bg.jpeg',
         title: '',
-        desc: `Chez Bridge Former est un art`,
+        desc: `Former est un art`,
     },
     {
         id: 2,
