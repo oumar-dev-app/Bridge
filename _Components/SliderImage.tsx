@@ -7,7 +7,7 @@ import Container from './Container';
 const Images = [
     {
         id: 1,
-        ImageSrc: '/enligneSlide.jpeg',
+        ImageSrc: '/enligne.png',
         title: 'Cours en ligne',
         desc: `En ligne, nous offrons des formations de haute qualité, accessibles et flexibles, conçues pour répondre à vos besoins spécifiques.`,
     },

@@ -20,7 +20,7 @@ function Enligne() {
                             </div>
                             <div>
                                 <Image 
-                                src={"/ouqueH.jpeg"} 
+                                src={"/enligneSlide.jpeg"} 
                                 alt="enligne" 
                                 width={450} 
                                 height={450}
