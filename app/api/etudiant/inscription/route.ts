@@ -13,6 +13,7 @@ export async function POST(req: Request) {
       quartier,
     } = await req.json();
 
+    // Vérification des champs obligatoires
     if (!nom || !prenom || !email || !telephone || !quartier) {
       return NextResponse.json(
         { message: "Champs obligatoires manquants" },
@@ -41,6 +42,7 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (error: any) {
+    // Gestion des doublons
     if (error.code === "ER_DUP_ENTRY") {
       return NextResponse.json(
         { message: "Email déjà utilisé" },
