@@ -13,7 +13,7 @@ const Images = [
     },
     {
         id: 2,
-        ImageSrc: '/presentiel1.jpeg',
+        ImageSrc: '/presentielSlide.jpeg',
         title: 'Cours présentiel',
         desc: `Nos formateurs se déplacent chez vous ou vous accueillent dans nos centres de formation.`,
     },
