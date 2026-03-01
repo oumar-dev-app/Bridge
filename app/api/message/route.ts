@@ -1,36 +1,34 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
+import { supabase } from "@/lib/supabaseClient";
 
 export async function POST(req: Request) {
   try {
-    const {
-      email,
-      message
-    } = await req.json();
+    const { email, message } = await req.json();
 
-    const sql = `
-      INSERT INTO Message
-      (email, message)
-      VALUES (?, ?)
-    `;
+    const { data, error } = await supabase
+      .from("Message")
+      .insert([{ email, message }]);
 
-    await db.execute(sql, [
-      email,
-      message
-    ]);
-
-  
+    if (error) {
+      // Gestion de l'erreur de doublon (unique constraint)
+      if (error.code === "23505") { // PostgreSQL code pour "unique_violation"
+        return NextResponse.json(
+          { message: "Email déjà utilisé" },
+          { status: 409 }
+        );
+      }
+      throw error;
+    }
 
     return NextResponse.json(
-      { message: "Message envoyer avec succè" },
+      { message: "Message envoyé avec succès", data },
       { status: 201 }
     );
   } catch (error: any) {
-    if (error.code === "ER_DUP_ENTRY") {
-      return NextResponse.json(
-        { message: "Email déjà utilisé" },
-        { status: 409 }
-      );
-    }
+    console.error("Erreur Supabase:", error);
+    return NextResponse.json(
+      { message: "Erreur serveur" },
+      { status: 500 }
+    );
   }
 }

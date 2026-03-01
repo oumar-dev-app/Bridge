@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function GET() {
   try {
-    const [rows] = await db.query(
-      'SELECT * FROM Message ORDER BY created_at DESC'
-    );
+    const { data, error } = await supabase
+      .from('Message')
+      .select('*')
+      .order('created_at', { ascending: false });
 
-    return NextResponse.json(rows);
+    if (error) throw error;
+
+    return NextResponse.json(data);
   } catch (error) {
-    console.error('Erreur MySQL:', error);
+    console.error('Erreur Supabase:', error);
     return NextResponse.json(
       { message: 'Erreur serveur' },
       { status: 500 }

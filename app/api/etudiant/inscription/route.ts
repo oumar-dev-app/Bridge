@@ -1,17 +1,9 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
+import { supabase } from "@/lib/supabaseClient";
 
 export async function POST(req: Request) {
   try {
-    const {
-      nom,
-      prenom,
-      email,
-      telephone,
-      niveauAnglais,
-      pays,
-      quartier,
-    } = await req.json();
+    const { nom, prenom, email, telephone, niveauAnglais, pays, quartier } = await req.json();
 
     // Vérification des champs obligatoires
     if (!nom || !prenom || !email || !telephone || !quartier) {
@@ -21,36 +13,27 @@ export async function POST(req: Request) {
       );
     }
 
-    const sql = `
-      INSERT INTO inscription
-      (nom, prenom, email, telephone, niveauAnglais, pays, quartier)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
-    `;
+    const { data, error } = await supabase
+      .from("inscription")
+      .insert([{ nom, prenom, email, telephone, niveauAnglais, pays, quartier }]);
 
-    await db.execute(sql, [
-      nom,
-      prenom,
-      email,
-      telephone,
-      niveauAnglais,
-      pays,
-      quartier,
-    ]);
+    if (error) {
+      // Gestion des doublons (PostgreSQL code 23505 = violation unique constraint)
+      if (error.code === "23505") {
+        return NextResponse.json(
+          { message: "Email déjà utilisé" },
+          { status: 409 }
+        );
+      }
+      throw error;
+    }
 
     return NextResponse.json(
-      { message: "Inscription enregistrée" },
+      { message: "Inscription enregistrée", data },
       { status: 201 }
     );
   } catch (error: any) {
-    // Gestion des doublons
-    if (error.code === "ER_DUP_ENTRY") {
-      return NextResponse.json(
-        { message: "Email déjà utilisé" },
-        { status: 409 }
-      );
-    }
-
-    console.error(error);
+    console.error("Erreur Supabase:", error);
     return NextResponse.json(
       { message: "Erreur serveur" },
       { status: 500 }

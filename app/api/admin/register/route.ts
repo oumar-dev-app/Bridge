@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
+import { supabase } from "@/lib/supabaseClient";
 import bcrypt from "bcryptjs";
 
 export async function POST(req: Request) {
@@ -15,23 +15,27 @@ export async function POST(req: Request) {
 
     const hash = await bcrypt.hash(password, 10);
 
-    await db.execute(
-      "INSERT INTO admin (email, password) VALUES (?, ?)",
-      [email, hash]
-    );
+    const { data, error } = await supabase
+      .from("admin")
+      .insert([{ email, password: hash }]);
+
+    if (error) {
+      // Gestion du doublon : PostgreSQL code 23505 = unique_violation
+      if (error.code === "23505") {
+        return NextResponse.json(
+          { message: "Admin déjà existant" },
+          { status: 409 }
+        );
+      }
+      throw error;
+    }
 
     return NextResponse.json(
-      { message: "Admin créé" },
+      { message: "Admin créé", data },
       { status: 201 }
     );
   } catch (error: any) {
-    if (error.code === "ER_DUP_ENTRY") {
-      return NextResponse.json(
-        { message: "Admin déjà existant" },
-        { status: 409 }
-      );
-    }
-
+    console.error("Erreur Supabase:", error);
     return NextResponse.json(
       { message: "Erreur serveur" },
       { status: 500 }

@@ -29,7 +29,7 @@ function Inscription() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch("/api/etudiant/inscription", {
+    const res = await fetch("/api/inscription/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

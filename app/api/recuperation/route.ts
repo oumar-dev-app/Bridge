@@ -1,27 +1,19 @@
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 /**
  * GET → afficher la liste des étudiants
  */
 export async function GET() {
   try {
-    const [rows] = await db.query(`
-      SELECT 
-        id,
-        nom,
-        prenom,
-        email,
-        telephone,
-        niveauAnglais,
-        pays,
-        quartier,
-        date_creation
-      FROM inscription
-      ORDER BY date_creation DESC
-    `);
+    const { data, error } = await supabase
+      .from('inscription')
+      .select('id, nom, prenom, email, telephone, niveauAnglais, pays, quartier, date_creation')
+      .order('date_creation', { ascending: false });
 
-    return NextResponse.json(rows);
+    if (error) throw error;
+
+    return NextResponse.json(data);
   } catch (error) {
     console.error(error);
     return NextResponse.json(
@@ -46,14 +38,15 @@ export async function POST(req: Request) {
       quartier,
     } = await req.json();
 
-    await db.query(
-      `INSERT INTO inscription
-       (nom, prenom, email, telephone, niveauAnglais, quartier)
-       VALUES (?, ?, ?, ?, ?, ?)`,
-      [nom, prenom, email, telephone, niveauAnglais, pays, quartier]
-    );
+    const { data, error } = await supabase
+      .from('inscription')
+      .insert([
+        { nom, prenom, email, telephone, niveauAnglais, pays, quartier }
+      ]);
 
-    return NextResponse.json({ success: true });
+    if (error) throw error;
+
+    return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error(error);
     return NextResponse.json(
