@@ -6,7 +6,12 @@ import Footer from "@/_Components/Footer";
 import { Analytics } from "@vercel/analytics/react"
 
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+const poppins = Poppins(
+  {
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"]
+  }
+);
 
 export const metadata: Metadata = {
   title: "Bridge-Mali",
