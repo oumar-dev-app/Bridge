@@ -3,7 +3,11 @@ import Image from "next/image";
 
 function Presentiel() {
   return (
+<<<<<<< HEAD
         <div className=" bg-blue-950 p-10">
+=======
+        <div className=" bg-blue-950">
+>>>>>>> 92cbf1a (reinitialisation du projet)
                 <Container>
                     <div className='py-12 grid grid-cols-1 md:grid-cols-2 m-5 lg:grid-cols-2 space-y-4'>
                         <div className="w-full">

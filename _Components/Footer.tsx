@@ -14,6 +14,7 @@ import WhatsappBtn from './WhatsappBtn';
 const Footer = () => {
   return (
     <footer className='bg-blue-950 text-white'>
+<<<<<<< HEAD
   
         {/* Les reseaux sociaus */}
         <div>
@@ -23,13 +24,29 @@ const Footer = () => {
       <Container>
         <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
           
+=======
+
+      {/* Les reseaux sociaus */}
+      <div>
+        <IconsFooter />
+      </div>
+
+      <Container>
+        <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
+
+>>>>>>> 92cbf1a (reinitialisation du projet)
           {/* Lien et inscript et partie admin */}
           <div className=' py-3 '>
             <h1 className='font-semibold py-3'>Liens rapide</h1>
             <FooterLink />
             <div className='py-3'>
+<<<<<<< HEAD
               <LoginBtnFooter />
               <AdminBtn />
+=======
+              {/*               <LoginBtnFooter />
+              <AdminBtn /> */}
+>>>>>>> 92cbf1a (reinitialisation du projet)
               <WhatsappBtn />
             </div>
           </div>
@@ -45,7 +62,11 @@ const Footer = () => {
             <AdressMap />
           </div>
         </div>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 92cbf1a (reinitialisation du projet)
       </Container>
       <Container>
 

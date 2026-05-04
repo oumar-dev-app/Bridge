@@ -54,7 +54,11 @@ function Message() {
           name="email"
           id="email"
           required placeholder='Votre adresse email'
+<<<<<<< HEAD
           className='border  p-2 text-black rounded-lg outline-0  bg-white border-white'
+=======
+          className='border-3  p-2 text-white rounded-lg outline-0   border-white/25'
+>>>>>>> 92cbf1a (reinitialisation du projet)
         />
 
         <textarea
@@ -64,7 +68,11 @@ function Message() {
           name='message'
           placeholder='Votre message ici...'
           required
+<<<<<<< HEAD
           className='border p-2 text-black rounded-lg outline-0 border-white bg-white'
+=======
+          className='border-3  p-2 text-white rounded-lg outline-0   border-white/25'
+>>>>>>> 92cbf1a (reinitialisation du projet)
         />
 
         {errorMessage && <p className="text-red-600 text-sm">{errorMessage}</p>}

@@ -57,7 +57,11 @@ function SliderImage() {
                             style={{ backgroundImage: `url(${item.ImageSrc})` }}
                         >
                             {/* Overlay */}
+<<<<<<< HEAD
                             <div className="w-full h-full bg-black/60 absolute top-0 left-0 gb-gradient-to-b from-transparent to-black/90"></div>
+=======
+                            <div className="w-full h-full bg-black/70 absolute top-0 left-0 gb-gradient-to-b from-transparent to-black/90"></div>
+>>>>>>> 92cbf1a (reinitialisation du projet)
 
                             {/* Contenu */}
                            { currentIndex ==index &&  <div className="absolute m-5 shadow-[0_0_40px_rgba(0,0,0,0,7)] w-110 space-y-5 bottom-90 slideUp">

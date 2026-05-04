@@ -6,7 +6,11 @@ function Enligne() {
     <div>
          <Container>
                 <div className="space-y-20  bg-blue-950 ">
+<<<<<<< HEAD
                     <div className="p-10 bg-white">
+=======
+                    <div className=" bg-white">
+>>>>>>> 92cbf1a (reinitialisation du projet)
                         <div className='py-16 grid grid-cols-1 gap-8 md:grid-cols-2 m-5 lg:grid-cols-2 space-y-5'>
                             <div  className="flex flex-col justify-center ">
                                 <div className="bg-blue-950 p-2 rounded-2xl w-50 mb-5">

@@ -5,7 +5,11 @@ function Soyez() {
     return (
         <div>
             <Container>
+<<<<<<< HEAD
                 <div className=" p-10 bg-white">
+=======
+                <div className="bg-white">
+>>>>>>> 92cbf1a (reinitialisation du projet)
                     <div className='py-12 grid grid-cols-1 md:grid-cols-2 m-5 lg:grid-cols-2 space-y-4 gap-5'>
                         <div className="flex flex-col justify-center ">
                             <div className=" bg-blue-950 p-2 rounded-2xl w-50 mb-5">
