@@ -1,8 +1,6 @@
 'use client';
 import { useState } from "react";
 
-
-
 function Message() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -10,7 +8,7 @@ function Message() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // empêche l'envoi classique du formulaire
+    e.preventDefault();
     setErrorMessage("");
     setLoading(true);
 
@@ -18,21 +16,21 @@ function Message() {
       const res = await fetch("/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, message, }),
+        body: JSON.stringify({ email, message }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        setErrorMessage(data.message || "Erreur lors de la connexion");
+        setErrorMessage(data.message || "Erreur lors de l'envoi");
         return;
       }
 
-      // vider les champs après soumission réussie
+      // Reset formulaire
       setEmail("");
       setMessage("");
-      alert("Message envoyer avec succè !")
-
+      alert("Message envoyé avec succès !");
+      
     } catch (err) {
       console.error(err);
       setErrorMessage("Erreur serveur, réessayez plus tard");
@@ -40,25 +38,25 @@ function Message() {
       setLoading(false);
     }
   };
+
   return (
     <div className='mt-2 space-y-4'>
       <h1 className='font-semibold'>Envoyez-nous un message</h1>
-      <p className='text-sm'>Dis-nous comment nous pourrons vous aider et nous ferons tout notre possible pour vous répondre à temps.</p>
+      <p className='text-sm'>
+        Dis-nous comment nous pouvons vous aider et nous ferons de notre mieux pour répondre rapidement.
+      </p>
+
       <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
 
-
-
-        <input type="email"
+        <input
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           name="email"
           id="email"
-          required placeholder='Votre adresse email'
-<<<<<<< HEAD
-          className='border  p-2 text-black rounded-lg outline-0  bg-white border-white'
-=======
-          className='border-3  p-2 text-white rounded-lg outline-0   border-white/25'
->>>>>>> 92cbf1a (reinitialisation du projet)
+          required
+          placeholder='Votre adresse email'
+          className='border p-2 text-black rounded-lg outline-none bg-white border-gray-300'
         />
 
         <textarea
@@ -68,25 +66,24 @@ function Message() {
           name='message'
           placeholder='Votre message ici...'
           required
-<<<<<<< HEAD
-          className='border p-2 text-black rounded-lg outline-0 border-white bg-white'
-=======
-          className='border-3  p-2 text-white rounded-lg outline-0   border-white/25'
->>>>>>> 92cbf1a (reinitialisation du projet)
+          className='border p-2 text-black rounded-lg outline-none border-gray-300 bg-white min-h-[120px]'
         />
 
-        {errorMessage && <p className="text-red-600 text-sm">{errorMessage}</p>}
+        {errorMessage && (
+          <p className="text-red-600 text-sm">{errorMessage}</p>
+        )}
 
         <button
           type='submit'
-          className='w-full bg-white text-black p-2 hover:bg-gray-200 cursor-pointer rounded-lg text-sm font-semibold'
+          disabled={loading}
+          className='w-full bg-white text-black p-2 hover:bg-gray-200 disabled:bg-gray-300 cursor-pointer rounded-lg text-sm font-semibold'
         >
-          {loading ? "Envoyer..." : "Envoyer le message"}
+          {loading ? "Envoi..." : "Envoyer le message"}
         </button>
 
       </form>
     </div>
-  )
+  );
 }
 
 export default Message;

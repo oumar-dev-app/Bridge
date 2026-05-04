@@ -36,7 +36,7 @@ function IconsFooter() {
     return (
         <div className='w-7xl '>
 
-            <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
+            <div className=' grid grid-cols-2  m-5 md:grid-cols-2  lg:grid-cols-2'>
                 {data.map((icons) => {
                     return (
                         <div key={icons.id} className='border border-white/20 cursor-pointer  w-60 p-2 rounded-lg shadow-lg'>

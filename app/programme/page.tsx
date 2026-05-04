@@ -3,7 +3,7 @@ import Container from "@/_Components/Container"
 export default function NosProgramme() {
     return (
         <Container>
-            <div className="m-4 bg-blue-950 p-10 mb-10 rounded-lg space-y-6 text-white">
+            <div className="m-4 bg-blue-950  mb-10 rounded-lg space-y-6 text-white">
                 <div className="space-y-4 border border-white/25 rounded-xl p-2">
                     <h1 className="text-2xl font-bold text-center">COURS EN GROUPE</h1>
                     <h3 className="font-bold text-center">Jours</h3>

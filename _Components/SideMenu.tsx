@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import SocialMedia from './SocialMedia';
 import { X } from 'lucide-react';
 import SocialMenuLogo from './SocialMenuLogo';
-import AdminBtn from './AdminBtn';
 
 interface SidebarProps {
     isOpen: boolean;
@@ -47,7 +46,6 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
                         )
                     })}
                 </div>
-                <AdminBtn/>
            <SocialMedia/>
             </div>
         </div>

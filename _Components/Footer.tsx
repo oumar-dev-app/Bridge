@@ -3,81 +3,61 @@ import FooterTop from './FooterTop';
 import FooterLink from './FooterLink';
 import Message from './Message';
 import LogoFooter from './LogoFooter';
-import AdminBtn from './AdminBtn';
 import IconsFooter from './IconsFooter';
-import LoginBtnFooter from './LoginBtnFooter';
 import AdressMap from './AdressMap';
 import WhatsappBtn from './WhatsappBtn';
-
-
 
 const Footer = () => {
   return (
     <footer className='bg-blue-950 text-white'>
-<<<<<<< HEAD
-  
-        {/* Les reseaux sociaus */}
-        <div>
-          <IconsFooter />
-        </div>
-    
-      <Container>
-        <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
-          
-=======
 
-      {/* Les reseaux sociaus */}
+      {/* Réseaux sociaux */}
       <div>
         <IconsFooter />
       </div>
 
       <Container>
-        <div className='py-6  grid grid-cols-1 gap-2 m-5 md:grid-cols-2  lg:grid-cols-4'>
+        <div className='py-6 grid grid-cols-1 gap-2 m-5 md:grid-cols-2 lg:grid-cols-4'>
 
->>>>>>> 92cbf1a (reinitialisation du projet)
-          {/* Lien et inscript et partie admin */}
-          <div className=' py-3 '>
+          {/* Liens */}
+          <div className='py-3'>
             <h1 className='font-semibold py-3'>Liens rapide</h1>
             <FooterLink />
             <div className='py-3'>
-<<<<<<< HEAD
-              <LoginBtnFooter />
-              <AdminBtn />
-=======
-              {/*               <LoginBtnFooter />
-              <AdminBtn /> */}
->>>>>>> 92cbf1a (reinitialisation du projet)
               <WhatsappBtn />
             </div>
           </div>
+
+          {/* Partie top */}
           <div className='py-3'>
             <FooterTop />
           </div>
+
+          {/* Message */}
           <div className='flex w-full justify-center py-3'>
             <Message />
           </div>
 
-          {/* La localisation */}
+          {/* Localisation */}
           <div className='py-3 ml-10'>
             <AdressMap />
           </div>
-        </div>
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 92cbf1a (reinitialisation du projet)
+        </div>
       </Container>
+
       <Container>
-
-        {/* Signe par: */}
-        <div className='border-t mt-2 border-white/20'>
+        {/* Footer bas */}
+        <div className='border-t mt-2 border-white/20 text-center'>
           <LogoFooter />
-          <p className='text-center text-sm font-semibold'>Copyright©2026 by Bridge</p>
+          <p className='text-sm font-semibold'>
+            Copyright©2026 by Bridge
+          </p>
         </div>
       </Container>
-    </footer >
-  )
+
+    </footer>
+  );
 }
 
 export default Footer;
