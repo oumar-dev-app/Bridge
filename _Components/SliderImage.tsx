@@ -58,7 +58,7 @@ function SliderImage() {
             >
 
               {/* Overlay */}
-              <div className="w-full h-full bg-black/70 absolute top-0 left-0 bg-linear-to-b from-transparent to-black/60"></div>
+              <div className="w-full h-full bg-black/50 absolute top-0 left-0 bg-linear-to-b from-transparent to-black/90"></div>
 
               {/* Contenu */}
               {currentIndex === index && (
