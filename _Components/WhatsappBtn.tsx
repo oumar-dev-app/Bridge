@@ -1,9 +1,6 @@
-import { SiWhatsapp } from 'react-icons/si'
+import { SiWhatsapp } from 'react-icons/si';
 
 function WhatsappBtn() {
-  const phoneNumber = "+223-78-90-23-89";
-  const message = "Bonjour, je souhaite avoir plus d'informations.";
-
   const whatsappLink = `https://wa.me/message/77EK6DIZCRHWH1`;
 
   return (
@@ -11,12 +8,19 @@ function WhatsappBtn() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm font-bold border-2  border-green-500 
-      rounded-lg p-2 w-50 hover:bg-green-700 hoverEffect shadow-2xl 
-      flex items-center gap-2 mt-5 cursor-pointer"
+      className="
+        fixed bottom-6 right-6
+        z-50
+        flex items-center gap-2
+        bg-green-600 text-white
+        px-4 py-3 rounded-full
+        shadow-lg
+        hover:bg-green-700
+        transition
+      "
     >
-      <SiWhatsapp size={30} className="text-green-500" />
-      Contactez-nous
+      <SiWhatsapp size={24} />
+      <span className="text-sm font-semibold">WhatsApp</span>
     </a>
   );
 }
