@@ -23,12 +23,9 @@ const Footer = () => {
           <div className='py-3'>
             <h1 className='font-semibold py-3'>Liens rapide</h1>
             <FooterLink />
+
             <div className='py-3'>
-<<<<<<< HEAD
-=======
-              {/*<LoginBtnFooter />
-              <AdminBtn /> */}
->>>>>>> 2b58d19 (sauvegarde avant rebase)
+              {/* Boutons futurs admin/login si besoin */}
               <WhatsappBtn />
             </div>
           </div>
