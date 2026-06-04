@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/_Components/Header";
 import Footer from "@/_Components/Footer";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next"
 
 
 const poppins = Poppins(
@@ -32,9 +32,9 @@ export default function RootLayout({
         <Header />
         <main>
           {children}
-          <Analytics />
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
